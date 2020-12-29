@@ -1,0 +1,4 @@
+## Append samples you want in your CSV to this file as resources ##
+resources:
+- telegram_v1alpha1_botmessage.yaml
+# +kubebuilder:scaffold:manifestskustomizesamples

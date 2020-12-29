@@ -1,0 +1,10 @@
+apiVersion: telegram.my.domain/v1alpha1
+kind: BotMessage
+metadata:
+  name: sample
+spec:
+  text: sample message from custom resource # text to be sent
+  image: quay.io/lrossett/telegram-send:latest # image to be used by sender pods
+  secret:
+    name: telegram-bot
+    # namespace: default # optional, the operator will use CR namespace if this property is not set

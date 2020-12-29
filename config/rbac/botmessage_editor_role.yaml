@@ -1,0 +1,24 @@
+# permissions for end users to edit botmessages.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: botmessage-editor-role
+rules:
+- apiGroups:
+  - telegram.my.domain
+  resources:
+  - botmessages
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - telegram.my.domain
+  resources:
+  - botmessages/status
+  verbs:
+  - get

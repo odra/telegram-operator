@@ -1,0 +1,14 @@
+#!/bin/bash
+
+TEXT=$1
+URL="https://api.telegram.org/bot$TG_BOT_TOKEN/sendMessage"
+BODY="{\"text\": \"$TEXT\", \"chat_id\": \"$TG_CHAT_ID\"}"
+
+echo $URL
+echo $BODY
+
+curl \
+-X POST \
+-H 'Content-Type: application/json' \
+-d "$BODY" \
+"$URL"
